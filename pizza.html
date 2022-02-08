@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍕</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .animate {
+        animation: fadeIn linear 0.5s;
+      }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+  <script type="text/javascript">
+    // If you are looking at this you are nerd :P
+    for (let index = 0; index < 5000; index++) {
+      createSunflower(index);
+    }
+    function createSunflower(i) {
+      setTimeout(function () {
+        let sunflowerEmoji = document.createElement("span");
+        sunflowerEmoji.innerText = "🍕";
+        sunflowerEmoji.classList.add("animate");
+        document.body.append(sunflowerEmoji);
+      }, 100 * i);
+    }
+  </script>
+</html>
